@@ -1,0 +1,38 @@
+services:
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hn_net
+
+  backend:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
+    depends_on:
+      mongo:
+        condition: service_healthy
+    networks:
+      - hn_net
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - hn_net
+
+volumes:
+  mongo_data:
+
+networks:
+  hn_net:
