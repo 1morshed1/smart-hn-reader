@@ -1,0 +1,79 @@
+Smart Hacker News Reader
+The Problem
+Hacker News gets hundreds of stories daily with thousands of comments. The discussions are often more valuable than the articles themselves — but reading through 200+ comments to find the key insights is time-consuming.
+Build a Hacker News client that uses AI to summarize comment discussions.
+
+What to Build
+A Hacker News client with your own backend that adds AI-powered discussion summaries.
+1. Hacker News Feed
+Fetch and display stories from the HN API (top, new, best)
+Story list showing: title, points, author, time ago, comment count
+Click a story → see the full threaded/nested comment tree
+Pagination or infinite scroll
+2. Bookmarking
+Save stories to your own database
+View your bookmarked stories
+Remove bookmarks
+3. AI Discussion Summary
+On any story with comments, a "Summarize Discussion" button
+AI reads the comment thread and returns:
+Key points discussed
+Overall sentiment (positive, negative, mixed, neutral)
+A short summary of the discussion
+4. Search Bookmarks
+Simple search across your bookmarked stories
+
+Technical Requirements
+Component
+Requirement
+Frontend
+Your choice — React, Next.js, Vue, or anything you prefer for Web App
+Backend
+Any JS/TS or Python web framework (Express, NestJS, FastAPI, Django, etc.)
+Database
+Your choice — PostgreSQL, MySQL, SQLite, MongoDB, whatever fits your approach
+AI
+Any LLM — local (Ollama, LM Studio) or cloud API (OpenAI, Anthropic, Mistral, etc.)
+Data Source
+Hacker News API (free, public, no key needed)
+Infrastructure
+Docker Compose — docker-compose up must start everything
+
+Your stack choices are part of the evaluation. Pick what you know best and be ready to explain why.
+Note: If using a local LLM, it can be slow on CPU. That's fine — we care about how you handle the async processing, not the speed. Show a loading state, handle timeouts gracefully.
+
+What We're Looking For
+We're not looking for a production-ready application. We're looking for engineering quality in a small scope.
+Problem approach — how you break down and prioritize
+Backend & API design — data modeling, API structure, error handling
+AI integration — prompt design, handling edge cases
+Frontend — component structure, state management, usability
+README — your approach, decisions, and tradeoffs
+
+What We're NOT Looking For
+No authentication needed
+No multi-user support
+No deployment or CI/CD
+No tests required (but we won't complain if you add them)
+Don't over-engineer — simple and clean beats complex and messy
+Don't spend time on fancy styling — functional and clean is enough
+If something is unclear, make an assumption and document it in your README.
+
+
+Deliverables
+Please submit your deliverables using the following form:
+🔗 https://forms.gle/obwopWnWTHPfuV7R9
+Your submission should include the following items:
+1. GitHub Repository
+• Public or private repository
+• If the repository is private, please invite adar2378 for access
+2. README File
+Your repository must include a README containing:
+• Clear setup instructions
+• Explanation of your approach and architecture decisions
+• Any tradeoffs you made during development
+• Simple bullet points describing what you would improve or add if you had more time
+3. Docker Requirement
+The project must run using:
+docker-compose up
+This will be the first step during evaluation.
