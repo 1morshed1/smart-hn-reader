@@ -1,4 +1,40 @@
+# ── Python / Backend ──────────────────────────────────────────────────────────
 venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Environment — keep .env.example, ignore actual secrets
+.env
+.env.local
+.env.*.local
+
+# ── Frontend (React + Vite) ───────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── IDE / Tools ───────────────────────────────────────────────────────────────
 .cursor/
 memory-bank/
 claude.md
+.idea/
+.vscode/
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
