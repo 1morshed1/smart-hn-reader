@@ -93,3 +93,9 @@ Interactive docs available at [http://localhost/api/docs](http://localhost/api/d
 - **Summary streaming** — Stream Gemini output token-by-token for a faster perceived response
 - **Better search** — Full-text search across bookmarks currently uses MongoDB text index on title only; extending to summary content would be more useful
 - **CORS lockdown + env-based config** — Restrict origins and externalize more config for a production-ready setup
+
+## Demo Video Link:
+
+[Demo Video](https://drive.google.com/file/d/1_BhtSgoZCSwBn9f637X37p839gKET2T0/view?usp=sharing)
+
+
